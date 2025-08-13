@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <!-- Bandera de Asturias -->
+            <button class="lang-btn active" data-lang="ast">
+                <svg viewBox="0 0 36 24" width="18" height="12">
+                    <rect width="36" height="24" fill="#0061C1"/>
+                    <rect y="8" width="36" height="8" fill="#FFCE00"/>
+                    <path d="M16,12 L18,8 L20,12 L18,16 Z" fill="#FFCE00"/>
+                    <circle cx="18" cy="12" r="2" fill="#0061C1"/>
+                </svg>
+                AST
+            </button>
+            
+            <!-- Bandera de España -->
+            <button class="lang-btn" data-lang="es">
+                <svg viewBox="0 0 36 24" width="18" height="12">
+                    <rect width="36" height="24" fill="#C60B1E"/>
+                    <rect y="8" width="36" height="8" fill="#FFC400"/>
+                </svg>
+                ESP
+            </button>
+            
+            <!-- Bandera del Reino Unido -->
+            <button class="lang-btn" data-lang="en">
+                <svg viewBox="0 0 36 24" width="18" height="12">
+                    <rect width="36" height="24" fill="#012169"/>
+                    <path d="M0,0 L36,24 M36,0 L0,24" stroke="#FFF" stroke-width="4"/>
+                    <path d="M12,0 L24,0 L24,12 L36,12 L36,24 L24,24 L24,12 L12,12 L12,24 L0,24 L0,12 L12,12 Z" fill="#C8102E"/>
+                    <path d="M15,0 L21,0 L21,9 L36,9 L36,15 L21,15 L21,24 L15,24 L15,15 L0,15 L0,9 L15,9 Z" fill="#C8102E"/>
+                </svg>
+                ENG
+            </button>
+        </div>
+
+        <button id="theme-toggle" aria-label="Cambiar modo claro/oscuro">
+            <i class="fas fa-moon"></i>
+        </button>
+        
+        <header>
+            <h1 id="main-title">☕ Generador de Café</h1>
+            <p id="subtitle">Descubre cafés especiales de todo el mundo</p>
+        </header>
+        
+        <main>
+            <div class="coffee-card">
+                <h2 id="coffee-title">Cargando...</h2>
+                <p id="coffee-description"></p>
+                <div class="coffee-details">
+                    <p id="coffee-origin"><strong>Origen:</strong> </p>
+                    <p id="coffee-type"><strong>Tipo:</strong> </p>
+                    <p id="coffee-intensity"><strong>Intensidad:</strong> </p>
+                </div>
+                
+                <button id="generate-btn">Generar Café</button>
+                <button id="alternative-btn" class="alternative-btn">Alternativa para grano normal</button>
+                <div id="alternative-container" class="alternative-container" style="display: none;">
+                    <p id="alternative-method"></p>
+                </div>
+                
+                <div class="intensity-container">
+                    <p id="intensity-label">Intensidad:</p>
+                    <div class="intensity-bar">
+                        <div id="intensity-level" class="intensity-level"></div>
+                    </div>
+                </div>
+                
+                <p id="coffee-counter">Cafés generados: 0</p>
+            </div>
+        </main>
+
+        <footer>
+                <p id="foter-text">Creado por <strong>github.com/PelayoHer</strong> usando DeepSeek como soporte principal</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
